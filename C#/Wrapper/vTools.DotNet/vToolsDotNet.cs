@@ -106,10 +106,10 @@ namespace vTools.DotNet
 
         public bool NextOutput() => _tools.NextOutput();
 
-        public (byte[] byteArray, int w, int h, int channels) GetImage(string name)
+        public Img GetImage(string name)
         {
             var bytes = _tools.GetImage(name, out int w, out int h, out int c);
-            return (bytes, w, h, c);
+            return new Img(bytes, w, h, c);
         }
 
         public string GetString(string name) => _tools.GetString(name);

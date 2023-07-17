@@ -55,7 +55,7 @@ namespace vTools.DotNet.Models
         public Point Center { get; set; }
         public double Radius1 { get; set; }
         public double Radius2 { get; set; }
-        public double Angle { get; set; }
+        public double Angle { get; }
     }
     public struct Line
     {

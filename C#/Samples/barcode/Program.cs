@@ -31,10 +31,10 @@ namespace barcode
                     if(tools.WaitObject(5000) && tools.NextOutput())
                     {
                         var barcode = tools.GetStringArray("Barcodes");
-                        //var img = tools.GetImage("Image");
+                        var img = tools.GetImage("Image");
                         
                         Console.WriteLine($"Barcode: {string.Join(",", barcode)}");
-                        //ImageWindow.DisplayImage(0, img.byteArray, PixelType.Mono8, img.w, img.h, 0, ImageOrientation.TopDown);
+                        ImageWindow.DisplayImage(0, img.Bytes, PixelType.Mono8, img.Width, img.Height, 0, ImageOrientation.TopDown);
                         Console.WriteLine(i);
                     }
                 }
